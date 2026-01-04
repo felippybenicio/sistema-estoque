@@ -1,0 +1,145 @@
+body {
+    background-color: var(--cinza);
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* garante que nada vaze horizontalmente */
+}
+
+.menuBtn .material-symbols-outlined{
+    
+}
+
+main {
+    padding-bottom: 100px;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+#lista {
+    padding: 10px;
+}
+
+.card-funcionario {
+    background: var(--branco);
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 6px solid var(--acento);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    margin-bottom: 12px;
+    transition: .2s;
+}
+
+.card-funcionario:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 14px rgba(0,0,0,.45);
+}
+
+.card-funcionario h3 {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+}
+
+.card-funcionario p {
+    margin: 2px 0;
+    opacity: .8;
+    font-size: 14px;
+}
+
+.acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none; 
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+    font-size: 14px;
+}
+
+.btn.editar {
+    background: var(--acento);
+    color: var(--branco);
+}
+
+.btn.excluir {
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+.vazio { 
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    opacity: .7;
+}
+
+footer {
+    background-color: var(--acento);
+    position: fixed;
+    bottom: 0px;
+    width: 100dvw;
+    border-top: 3px solid var(--primaria);
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+#cadastrarFunc {
+    color: var(--primaria);
+    background-color: var(--cinza);
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 3.5px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.116);
+    
+}
+
+#cadastrarFunc:hover {
+    color: #06295a;
+    box-shadow: inset 4px 3px 3px rgba(0, 0, 0, 0.116);
+}
+
+@media screen and (min-width: 750px) {
+    #lista {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .card-funcionario {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .topo {
+        padding-left: 260px;
+    }
+
+    main {
+        padding-left: 260px;
+    }
+
+    #lista {
+        max-width: 1780px;
+        margin: 40px auto;
+        position: relative
+    }
+}
+

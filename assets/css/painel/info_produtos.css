@@ -1,0 +1,209 @@
+#modalProduto {
+    background: var(--branco);
+    padding: 20px;
+    width: 100dvw;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#modalProduto.ativo {
+    opacity: 1;
+    pointer-events: all;
+} 
+
+#modalProduto .conteudo-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    position: relative;
+    width: 100dvw;
+    height: 100dvh;
+    padding: 0px 40px;
+}
+
+#modalProduto .conteudo-modal span#fecharModal {
+    align-self: flex-end;
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--primaria);
+    position: absolute;
+    top: -10px;
+    right: 6px;
+}
+
+#modalProduto .conteudo-modal h2 {
+    color: var(--primaria);
+    margin-bottom: 10px;
+}
+
+#modalProduto .conteudo-modal p {
+    position: relative;
+    background: var(--cinza);
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 2px 0;
+    font-size: 1.1em;
+    
+}
+
+#modalProduto .conteudo-modal p strong {
+    position: absolute;
+    right: 15px;
+    left: 120px; 
+    text-align: right;
+    white-space: normal; 
+    word-break: break-word;
+}
+
+#modalProduto .conteudo-modal #modalDescricao {
+    min-height: 120px;
+}
+
+#modalProduto .conteudo-modal #modalDescricao strong {
+    left: 12px;
+    top: 33px;
+    text-align: left;
+    font-size: .7em;
+}
+
+#btnEdcoes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#btnEdcoes button {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: var(--primaria);
+    color: var(--branco);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 1.2em;
+}
+
+#editar:hover, #salvarEdicao:hover {
+    background-color: var(--secundaria);
+}
+
+#editar, #salvarEdicao {
+    width: 200px;
+}
+
+button#deletarProduto1 {
+    background-color: #8a0000;
+}
+
+button#deletarProduto1:hover {
+    background-color: #b30000;
+}
+
+.overlayInfo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    display: none;
+    z-index: 100;
+}
+
+.overlayInfo.ativo {
+    display: block;
+}
+
+.modal.ativo {
+    z-index: 101; /* acima do overlay */
+}
+
+#modalProduto p {
+    position: relative;
+}
+
+.modal input,
+.modal textarea {
+    height: 35px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    border: 1px solid #cad2e0;
+    font-size: 1rem;
+    color: var(--primaria);
+    background: var(--cinza);
+    outline: none;
+    transition: 0.2s;
+}
+ 
+input.input-modal{
+    text-align: right;
+    min-width: 80px;
+    max-width: 110px;
+    position: absolute;
+    right: 0px;
+    margin: -7px 1px;
+    font-weight: 800;
+    background-color: transparent;
+    border-color: #cad2e0;
+}
+
+textarea.input-modal {
+    margin: -13px;
+    margin-top: 0px;
+    font-weight: 800;
+    font-size: .6em;
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 80px;
+}
+
+input#modalNome_input {
+    position: inherit;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 0px;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 800;
+    width: 300px;
+    height: 56px;
+}
+
+
+@media screen and (min-width: 750px) {
+
+    #modalProduto .conteudo-modal {
+        width: 450px;
+        height: auto;
+    }
+
+    #modalProduto {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: 860px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    textarea.input-modal {
+        min-width: 355px;
+        min-height: 87px;
+    }
+
+    #btnEdcoes button {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #modalProduto {
+        left: calc(50% + 130px);
+    }
+}

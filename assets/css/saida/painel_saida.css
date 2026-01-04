@@ -1,0 +1,163 @@
+body {
+    background: var(--cinza);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+}
+
+main {
+    margin: 15px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Item */
+.itemSaida, .info-formatado {
+    background: var(--branco);
+    padding: 15px;
+    padding-top: 25px;
+    border-radius: 8px;
+    border-left: 6px solid var(--acento);
+    margin-bottom: 12px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11);
+    position: relative;
+}
+
+#formSaida {
+     margin: auto;
+}
+
+.itemSaida label {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.itemSaida input {
+    background-color: var(--cinza);
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 4px;
+}
+
+#botoes {
+    margin-top: 25px;
+}
+
+.removerItem {
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+    background: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btnAdd {
+    width: 100%;
+    padding: 12px;
+    background: var(--acento);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: var(--branco);
+}
+
+.btnSalvar {
+    width: 100%;
+    padding: 12px;
+    background: #1b70a1;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--branco);
+}
+
+/* HOVER */
+button:hover {
+    filter: brightness(1.15);
+}
+
+p {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+    margin-top: 5px;
+}
+
+@media (min-width: 750px) {
+
+
+    #formSaida {
+        margin: auto;
+        width: 720px;
+        min-height: 800px;
+    }
+
+    #listaItens {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    #listaItensFormatados {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .info-formatado {
+        width: 240px;
+        margin: 15px auto;
+    }
+
+    .itemSaida {
+        width: 500px;
+        margin: 15px auto;
+    }
+
+    #botoes {
+        margin: auto;
+        width: 605px;
+        align-self: flex-end;
+    }
+
+    .btnAdd, .btnSalvar {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    main {
+        padding-left: 260px;
+    }
+
+    #container {
+        max-width: 1780px;
+        margin: 40px auto;
+        position: relative
+    }
+}
+
+@media (min-width: 1490px) {
+    .topo {
+        padding-left: 260px;
+    }
+
+    #formSaida {
+        width: 1000px;
+    }
+}

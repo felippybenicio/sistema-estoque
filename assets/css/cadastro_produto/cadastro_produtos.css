@@ -1,0 +1,164 @@
+body {
+    background: var(--cinza);
+}
+
+main {
+    margin: 15px;
+}
+
+.cadastroMultiplo {
+    margin-top: 20px;
+}
+
+#containerProdutos {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 16px;
+}
+
+.produtoBloco {
+    background: var(--branco);
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 5px solid var(--acento);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11)
+}
+
+.produtoBloco .grupo label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: bold;
+    gap: 4px;
+}
+
+.produtoBloco .grupo input,
+.produtoBloco .grupo textarea {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--cinza);
+    background: var(--cinza);
+    color: var(--texto);
+}
+
+.produtoBloco .grupo textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.btnRemoverItem {
+    background-color: transparent;
+    color: var(--vermelho);
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: -20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnRemoverItem:hover {
+    filter: brightness(1.1);
+}
+
+#btnAddProduto {
+    background: var(--acento);
+    color: var(--branco);
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+#btnAddProduto:hover {
+    filter: brightness(1.1);
+}
+
+.botoesFinal {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btnSalvar {
+    background: #1b70a1;
+    color: var(--branco);
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btnSalvar:hover {
+    filter: brightness(1.1);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--cinza);
+    margin: 12px 0;
+}
+
+@media screen and (min-width: 750px) {
+    #containerProdutos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .produtoBloco {
+        width: 349px;
+    }
+
+    .botoesFinal {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 16px;
+        margin: 16px auto;
+        margin-top: 200px;
+        width: 750px;
+    }
+
+    #btnAddProduto, .btnSalvar {
+        width: 300px;
+        margin: auto;
+    }
+}
+
+
+@media screen and (min-width: 1100px) {
+    main {
+        padding-left: 260px;
+    }
+
+    #formCadastroMultiplo {
+        max-width: 1085px;
+        margin: 40px auto;
+        position: relative
+    }
+}
+
+
+@media screen and (min-width: 1490px) {
+    .topo {
+        padding-left: 260px;
+    }
+
+    #containerProdutos {
+        max-width: 1110px;
+        margin: auto;
+    }
+}

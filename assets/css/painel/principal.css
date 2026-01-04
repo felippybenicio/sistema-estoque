@@ -1,0 +1,175 @@
+body {
+    background: var(--cinza);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+}
+
+.topo {
+    justify-content: space-between;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.topo p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+.ativo {
+    transform: translateX(0);
+}
+
+.menuBtn {
+    position: initial;
+}
+
+.menuBtn .material-symbols-outlined{
+    font-size: 33px;
+    background: none;
+    border: none;
+    color: var(--branco);
+    cursor: pointer;
+}
+
+/* ============================
+   CONTEÚDO PRINCIPAL
+================================*/
+.conteudo {
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.topo-painel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.topo-painel input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-produto {
+    background: var(--branco);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    cursor: pointer;
+    position: relative;
+}
+
+.item-produto .nome {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+ 
+.item-produto .codigo {
+    font-size: .9em;
+    opacity: .7;
+}
+
+#deletarProduto2 {
+    position: absolute;
+    right: 24px;
+    top: 17px;
+    font-size: 2.3em;
+    z-index: 1;
+}
+
+#deletarProduto2:hover {
+    color: var(--vermelho);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+   
+}
+
+.modal.ativo {
+    display: flex; /* mostra o modal */
+    animation: fadeIn 0.3s ease;
+}
+
+.modal h3 {
+    margin: 0px;
+    font-size: 2.5em;
+    text-align: center;
+}
+/* ============================
+   DESKTOP
+================================*/
+@media (min-width: 750px) {
+    .topo-painel {
+        width: 720px;
+        margin: 15px auto 40px auto;
+    }
+
+    .item-produto {
+        width: 720px;
+        margin: auto;
+    }
+
+    #lista-produtos .lista-produtos {
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .conteudo {
+        padding-left: 260px;
+    }
+
+    #listaProdutos {
+        max-width: 1780px;
+        margin: 10px auto;
+        position: relative
+    }
+}
+
+@media (min-width: 1490px) {
+    .topo {
+        padding-left: 260px;
+    }
+
+    .topo::before {
+        content: "";
+    }
+
+    #menuBtn {
+        display: none;
+    }
+
+    .lista-produtos {
+        display: flex;
+        flex-flow: row wrap;
+        
+    }
+}
